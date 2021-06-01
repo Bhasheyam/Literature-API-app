@@ -9,7 +9,7 @@ import (
 )
 
 //globall variables for the game and card
-    var data = map[string]map[string]bool{
+    var data =  map[string]map[string]bool{
     "p1": map[string]bool{},
     "p2": map[string]bool{},
     "p3": map[string]bool{},

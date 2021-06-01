@@ -1,10 +1,11 @@
-package app
+package main
 
 import (
     "fmt"
     "net/http"
     g "./generator"
     "encoding/json"
+    
 )
 
 func main() {
@@ -16,5 +17,5 @@ func HelloServer(w http.ResponseWriter, r *http.Request) {
      res := g.Game()
 	 res1,_  :=json.MarshalIndent(res,""," ")
 
-    fmt.Fprintf(w, string(res1), r.URL.Path[1:])
+    fmt.Fprintf(w,string(res1))
 }
