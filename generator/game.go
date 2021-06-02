@@ -118,7 +118,7 @@ func random_id(l int) string {
 
 
 //Game generator
-func Game() String {
+func Game() string {
   random_array_card := random_card()
   random_game_id := random_id(5)
   game := &game_setup{
