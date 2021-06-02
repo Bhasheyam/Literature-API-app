@@ -127,7 +127,7 @@ func Game() string {
     jsonValue, _ := json.Marshal(game)
     var authAuthenticatorUrl = "https://0ff9gmqzud.execute-api.us-west-1.amazonaws.com/default/Literature-game-status"
     resp, _ := http.Post(authAuthenticatorUrl, "application/json", bytes.NewBuffer(jsonValue))
-   return resp
+   return resp.Status
 }
 
 
