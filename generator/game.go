@@ -121,7 +121,10 @@ func Game() *game_setup {
   game := &game_setup{
      Game_id:random_game_id,
     Players_card:random_array_card} 
-   return game
+    jsonValue, _ := json.Marshal(game)
+    var authAuthenticatorUrl = "https://0ff9gmqzud.execute-api.us-west-1.amazonaws.com/default/Literature-game-status"
+    resp, err := http.Post(authAuthenticatorUrl, "application/json", bytes.NewBuffer(jsonValue))
+   return "success"
 }
 
 

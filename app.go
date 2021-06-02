@@ -15,7 +15,5 @@ func main() {
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
      res := g.Game()
-	 res1,_  :=json.MarshalIndent(res,""," ")
-
-    fmt.Fprintf(w,string(res1))
+    fmt.Fprintf(w,string(res))
 }
