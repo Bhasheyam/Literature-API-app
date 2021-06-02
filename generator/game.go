@@ -9,14 +9,7 @@ import (
 )
 
 //globall variables for the game and card
-    var data =  map[string]map[string]bool{
-    "p1": map[string]bool{},
-    "p2": map[string]bool{},
-    "p3": map[string]bool{},
-    "p4": map[string]bool{},
-    "p5": map[string]bool{},
-    "p6": map[string]bool{},
-}
+
 var data_card = map[int]string{
     0:"dia-3",
     1:"dia-4",
@@ -77,7 +70,14 @@ type game_setup struct {
 
 //function to random_card set for 6 players
 func random_card()  map[string]map[string]bool {
-
+  var data =  map[string]map[string]bool{
+    "p1": map[string]bool{},
+    "p2": map[string]bool{},
+    "p3": map[string]bool{},
+    "p4": map[string]bool{},
+    "p5": map[string]bool{},
+    "p6": map[string]bool{},
+}
   random_array := randomizer()
   var count int=0
 
