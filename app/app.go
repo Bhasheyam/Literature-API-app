@@ -18,7 +18,7 @@ type userProfile struct {
 	Email string `json:"email"`
 }
 
-const addr = "localhost:9000"
+const addr = ":9000"
 
 var userProfiles []userProfile
 
