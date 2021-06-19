@@ -8,6 +8,8 @@ import (
 
 	"io/ioutil"
 
+	udb "DB/UserDb.go"
+
 	"github.com/gorilla/mux"
 )
 
@@ -43,7 +45,7 @@ func handleRequests() {
 }
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Literature API Homepage\n")
+	fmt.Fprintf(w, udb.InitUser)
 }
 
 func returnalAllUsers(w http.ResponseWriter, r *http.Request) {
